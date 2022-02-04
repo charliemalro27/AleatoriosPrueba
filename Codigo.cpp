@@ -42,19 +42,27 @@ void restar5posicion(int vector[],int tamano){
 }
 //Adivina adivinanzaaaa
 void adivinarposicion(int vector[]){
+  int count=0;
   int numero;
   int posicion;
   cout<<"Que numero quieres adivinar de la lista? "<<endl;
   cin>>numero;
   do{
+    count+=1;
     cout<<"Intenta adivinar su posicion! "<<endl;
     cin>>posicion;
     if(vector[posicion]==numero){
       cout<<"ENHORABUENA LO HAS ADIVINADO OLEEEEE "<<endl;
+    }else{
+      cout<<"Prueba suerte otra vez..."<<endl;
+    }
+    if(count==5){
+      cout<<"Llegaste a tu limite losiento :( "<<endl;
     }
 
-}while(vector[posicion]!=numero);
+}while(vector[posicion]!=numero && count!=5);
 }
+
 //Cuerpo principal
 int main(){
 
