@@ -21,7 +21,7 @@ for(int count=0;count<tamano;count++){
 void rellenarcon0(int vector[],int tamano){
   for(int i=0;i<tamano;i++){
     vector[i]=0;
-    vector[tamano-1]=1;  
+    vector[tamano-1]=1;
 }
 }
 //Funcion Imprimir lista
@@ -30,9 +30,19 @@ void imprimirlista(int lista[],int tamano){
     cout<<lista[i]<<endl;
 }
 }
+//Funcion restar de 5 a la posicion introducida
+void restar5posicion(int vector[],int tamano){
+  int numero;
+   do{
+       cout<<"Introduce un numero del 1 al 10"<<endl;
+       cin>>numero;
+       vector[numero]=vector[numero]-5;
+
+}while(vector[numero]>=0);
+}
+//Cuerpo principal
 int main(){
 
- int numero=0;
  int lista[10];
  int lista0[10];
 
@@ -48,6 +58,14 @@ imprimirlista(lista,10);
 rellenarcon0(lista0,10);
 cout<<"Esta es la lista de 0 y 1"<<endl;
 imprimirlista(lista0,10);
+
+//Introduce un numero 1-10 y resta a la posicion;
+int numero;
+
+restar5posicion(lista,10);
+cout<<"Lista modificada! "<<endl;
+imprimirlista(lista,10);
+
 
   return 0;
 }
