@@ -40,12 +40,26 @@ void restar5posicion(int vector[],int tamano){
 
 }while(vector[numero]>=0);
 }
+//Adivina adivinanzaaaa
+void adivinarposicion(int vector[]){
+  int numero;
+  int posicion;
+  cout<<"Que numero quieres adivinar de la lista? "<<endl;
+  cin>>numero;
+  do{
+    cout<<"Intenta adivinar su posicion! "<<endl;
+    cin>>posicion;
+    if(vector[posicion]==numero){
+      cout<<"ENHORABUENA LO HAS ADIVINADO OLEEEEE "<<endl;
+    }
+
+}while(vector[posicion]!=numero);
+}
 //Cuerpo principal
 int main(){
 
  int lista[10];
  int lista0[10];
-
 //Nombre
 cout<<"Nombre: Soy Charlieeee"<<endl;
 
@@ -66,6 +80,8 @@ restar5posicion(lista,10);
 cout<<"Lista modificada! "<<endl;
 imprimirlista(lista,10);
 
+//Adivina la posicion del numero 1 en la lista0
+adivinarposicion(lista0);
 
   return 0;
 }
